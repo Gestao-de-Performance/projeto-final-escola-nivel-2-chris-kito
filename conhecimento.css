@@ -1,0 +1,115 @@
+.conhecimento{
+  background: var(--preto-100);
+  color: var(--branco-100);
+}
+.conhecimento-container{
+  max-width: 1920px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  position: relative;
+}
+.conhecimento-container::after{
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("img/detalhe.svg") no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+.conhecimento .subtitulo{
+  color: var(--preto-200); 
+}
+.conhecimento-texto{
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  color: var(--cinza-300);
+}
+.rotina-lista{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.rotina{
+  flex: 1;
+  background: var(--preto-200);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.rotina-tipo{
+  font-size: .875rem;
+  text-transform: uppercase;
+  color: var(--cinza-300);
+  margin-bottom: 10px;
+}
+.rotina-normal{
+  flex: 1;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  position: relative;
+}
+.rotina-normal::before{
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(var(--verde-100),var(--verde-200));
+  position: absolute;
+  left: -24px;
+}
+.rotina-instituicao{
+  font-size: 1.125rem;
+  color: var(--cinza-300)
+}
+.cursos h3{
+  font-size: 0.875rem;
+  line-height: 1,4;
+  color: var(--cinza-300);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+.cursos h3::before{
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("img/cursos.svg") no-repeat center center;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+.cursos li{
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.cursos span{
+  color: var(--cinza-300);
+}
+.cursos li{
+  display: flex;
+  justify-content: space-between;
+}
+@media(max-width: 800px){
+  .conhecimento-container{
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 50px;
+  }
+  .cursos h3::before{
+    position: initial;
+    margin-bottom: 20px;
+
+  }
+}
