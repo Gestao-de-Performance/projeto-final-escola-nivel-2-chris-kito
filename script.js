@@ -213,45 +213,52 @@ document.querySelectorAll('a.header-button').forEach(anchor => {
 });
 
 // botao voltar no final da pagina e voltar ao topo
-
 const scrollToTopButton = document.querySelector(".scroll-to-top");
 
-window.addEventListener("scroll", () => {
-  // Verifica se o usuário chegou ao final da página
-  if (document.documentElement.scrollHeight - window.innerHeight <= window.scrollY) {
-    scrollToTopButton.style.display = "block"; // Exibe o botão
-  } else {
-    scrollToTopButton.style.display = "none"; // Oculta o botão
-  }
-});
-
-scrollToTopButton.addEventListener("click", () => {
-  // Calcula a quantidade de rolagem necessária
-  let startPosition = window.scrollY;
-  let targetPosition = 0;
-  let distance = startPosition - targetPosition;
-  let duration = 1000; // Tempo de animação (em ms)
-  let startTime = null;
-
-  function scrollStep(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const progress = currentTime - startTime; // Tempo decorrido
-
-    // Calculando a quantidade de rolagem com base no tempo decorrido
-    const scrollAmount = Math.min(progress / duration, 1) * distance;
-
-    window.scrollTo(0, startPosition - scrollAmount); // Realiza a rolagem
-
-    // Se ainda não atingiu o destino, continuar o movimento
-    if (progress < duration) {
-      requestAnimationFrame(scrollStep);
+// Verifica se o botão existe antes de adicionar os listeners
+if (scrollToTopButton) {
+  // Exibe o botão quando o usuário rolar mais de 100px
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      scrollToTopButton.style.display = "block"; // Exibe o botão
     } else {
-      window.scrollTo(0, targetPosition); // Garantir que a posição final seja exata
+      scrollToTopButton.style.display = "none"; // Oculta o botão
     }
-  }
+  });
 
-  requestAnimationFrame(scrollStep); // Inicia a animação de rolagem
-});
+  // Quando o botão é clicado, anima a rolagem até o topo
+  scrollToTopButton.addEventListener("click", () => {
+    let startPosition = window.scrollY;
+    let targetPosition = 0;
+    let distance = startPosition - targetPosition;
+    let duration = 1000; // Tempo de animação (em ms)
+    let startTime = null;
+
+    /**
+     * Função de animação para rolar suavemente até o topo
+     * @param {number} currentTime - Tempo atual em milissegundos
+     */
+    function scrollStep(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const progress = currentTime - startTime; // Tempo decorrido
+
+      const scrollAmount = Math.min(progress / duration, 1) * distance; // Calcula a quantidade de rolagem
+
+      window.scrollTo(0, startPosition - scrollAmount); // Realiza a rolagem
+
+      // Se ainda não atingiu o destino, continuar o movimento
+      if (progress < duration) {
+        requestAnimationFrame(scrollStep);
+      } else {
+        window.scrollTo(0, targetPosition); // Garantir que a posição final seja exata
+      }
+    }
+
+    requestAnimationFrame(scrollStep);
+  });
+}
+
+
 
 
 

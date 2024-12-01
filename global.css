@@ -1,20 +1,18 @@
-html{
-  padding-left: 0px;
-}
 body{
   font-family: "Fira Sans", Arial, sans-serif;
   margin: 0px;
   color: var(--preto-100)
 }
+
 h1,h2,h3,p{
   margin: 0px;
 }
+
 ul{
   margin: 0%;
   padding: 0px;
   list-style: none;
 }
-
 
 .scroll-to-top {
   position: fixed;
@@ -27,6 +25,9 @@ ul{
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  display: none; /* Esconde o botão inicialmente */
+  max-width: 1920px; /* Limita a largura máxima */
+  width: auto; /* Largura ajustada conforme o conteúdo */
 }
 
 .scroll-to-top:hover {
