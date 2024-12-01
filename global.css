@@ -1,4 +1,6 @@
-
+html{
+  padding-left: 0px;
+}
 body{
   font-family: "Fira Sans", Arial, sans-serif;
   margin: 0px;
@@ -13,18 +15,6 @@ ul{
   list-style: none;
 }
 
-.carousel-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px; /* ajuste conforme necessário */
-  overflow: hidden;
-}
-.carousel-item img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain; /* ou "cover", dependendo do efeito desejado */
-}
 
 .scroll-to-top {
   position: fixed;
