@@ -57,7 +57,7 @@ function noturno() {
 
     // Define a cor para cada link (a)
     links.forEach((link) => {
-      link.style.color = "white";
+      link.style.color = "#141414";
     });
 
     // Define a cor para cada negritos (strong)
@@ -211,7 +211,6 @@ document.querySelectorAll('a.header-button').forEach(anchor => {
     requestAnimationFrame(scrollStep); // Inicia a animação de rolagem
   });
 });
-
 
 // botao voltar no final da pagina e voltar ao topo
 

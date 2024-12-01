@@ -24,7 +24,7 @@
       <img src="img/nome.svg" alt="Cristhian Vargas">
       <nav>
         <ul class="header-menu">
-          <li><button onclick="noturno()"> <img width="20px" height="20px" src="img/sol.png" alt=""></button></li>
+          <li><button class="header-button" onclick="noturno()"> <img width="20px" height="20px" src="img/sol.png" alt=""></button></li>
           <li><a class="header-button" href="#experiencia">Experiência</a></li>
           <li><a class="header-button" href="#formacao">Formação</a></li>
           <li><a class="header-button" href="#contato">Contato</a></li>
@@ -32,7 +32,34 @@
       </nav>
     </header>
     <main class="introducao">
-      <img src="img/euzim.jpg" alt="Cristhian" width="296" height="227">
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/alexander-akimenko-tWWdVrUSeik-unsplash.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/luca-severin-AJhkfcI3ncc-unsplash.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/marcus-ganahl-0O19huWJuUg-unsplash.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
       <div class="introducao-descricao">
         <h1></h1>
         <p>Localizado em Santa Maria</p>

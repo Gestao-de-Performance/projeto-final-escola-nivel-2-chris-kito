@@ -14,11 +14,41 @@
   align-items: center;
 }
 
-header-menu button {
-  padding: 10px 20px;
-  background: transparent;
+/* Estilização do botão */
+.header-button {
+  background-color: #f0f0f0; /* Cor de fundo inicial */
+  border: 2px solid #ddd; /* Borda para contraste */
+  border-radius: 50%; /* Torna o botão redondo */
+  padding: 10px; /* Espaçamento interno */
+  cursor: pointer; /* Mostra que é clicável */
+  transition: all 0.3s ease; /* Animações suaves */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+/* Alterações ao passar o mouse */
+.header-button:hover {
+  background-color: #ddd; /* Cor de fundo ao passar o mouse */
+  border-color: #ddd; /* Borda em destaque */
+  transform: scale(1.1); /* Aumenta o tamanho ligeiramente */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+/* Alterações ao clicar */
+.header-button:active {
+  transform: scale(0.95); /* Efeito de clique */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
+}
+
+/* Estilo para a imagem dentro do botão */
+.header-button img {
+  display: block; /* Remove margem do navegador */
+  margin: 0 auto; /* Centraliza a imagem */
+}
+
+header-menu li {
+  width: 20px;
+  height: 20px;
   border: none;
-  cursor: pointer;
 }
 
 .header-menu a{
@@ -35,6 +65,7 @@ header-menu button {
   color: var(--preto-200);
   transition: background-color 0.5s ease;
 }
+
 @media (max-width: 1100px){
   .header-menu a{
     font-size: 1.5rem;
