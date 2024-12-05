@@ -3,8 +3,7 @@ const imagemSvg = document.querySelector(".header img")
 const titulo = document.querySelector("h1");
 const subTitulos = document.querySelectorAll("h2");
 const paragrafos = document.querySelectorAll("p");
-const botao = document.querySelector("button");
-const links = document.querySelectorAll("a");
+const botao = document.querySelector("button")
 const negritos = document.querySelectorAll("strong");
 const formacaoTexto = document.querySelectorAll(".formacao-texto");
 const formacaoAno = document.querySelectorAll(".formacao-ano");
@@ -13,13 +12,12 @@ const corTituloFormacao = document.querySelectorAll(".rotina-tipo");
 const corRotinaNormal = document.querySelectorAll(".rotina-normal");
 const corRotinaInstituicao = document.querySelectorAll(".rotina-instituicao");
 
-//variaveis que recebm as cores padrões
+//variaveis que recebem as cores padrões
 const corPadrao = imagemSvg.style.fill;
 const corTitulo = titulo.style.color;
 const corSubTitulos = subTitulos[0].style.color;
 const corParagrafos = paragrafos[0].style.color;
 const corBotao = botao.style.color;
-const corLinks = links[0].style.color;
 const corNegritos = negritos[0].style.color;
 const corFormacaoTexto = formacaoTexto[0].style.color;
 const corFormacaoAno = formacaoAno[0].style.color;
@@ -53,11 +51,6 @@ function noturno() {
     // Define a cor para cada parágrafo (p)
     paragrafos.forEach((paragrafo) => {
       paragrafo.style.color = "white";
-    });
-
-    // Define a cor para cada link (a)
-    links.forEach((link) => {
-      link.style.color = "#141414";
     });
 
     // Define a cor para cada negritos (strong)
@@ -115,10 +108,6 @@ function noturno() {
     });
 
     botao.style.color = corBotao;
-
-    links.forEach((link) => {
-      link.style.color = corLinks;
-    });
 
     negritos.forEach((negrito) => {
       negrito.style.color = corNegritos;
